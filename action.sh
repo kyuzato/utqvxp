@@ -1,6 +1,6 @@
-branch=main
-git clone -b $branch https://github.com/TeamUltroid/Ultroid /root/TeamUltroid
+branch=v0.5.1
+git clone -b $branch https://github.com/vexido/Ultroid /root/TeamUltroid
 cp ultroid/.env /root/TeamUltroid/.env
 cd /root/TeamUltroid
-pip3 install -U -r re*/st*/optional-requirements.txt
-python3 -m pyUltroid
+docker build . --rm --force-rm --compress --pull --file Dockerfile -t ultroid
+docker run --privileged --env-file .env --rm -i ultroid 
