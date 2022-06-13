@@ -1,4 +1,4 @@
-branch=v0.5.1
+branch=main
 git clone -b $branch https://github.com/vexido/Ultroid /root/TeamUltroid
 cp ultroid/.env /root/TeamUltroid/.env
 cd /root/TeamUltroid
